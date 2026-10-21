@@ -4,7 +4,7 @@
 
 How I run a one-person career-coaching business (for international students job-hunting in Japan) with an AI agent, without letting the agent make decisions that should stay with a human.
 
-**▶ Interactive system map:** [`docs/index.html`](docs/index.html) (EN / 日本語 toggle; click any node to see what it reads, what it writes, and whether it needs approval)
+**▶ Interactive system map:** [li-yiqian.github.io/solo-business-agent-system](https://li-yiqian.github.io/solo-business-agent-system/) (EN / 日本語 toggle; click any node to see what it reads, what it writes, and whether it needs approval)
 
 ![System overview](docs/overview.png)
 
@@ -106,7 +106,7 @@ docs/overview.png   Screenshot of the swimlane overview
 
 在日留学生向けの就職コーチングを個人事業として運営しています。この仕組みでは日々の業務の大部分をAIエージェントに任せつつ、人間が判断すべきことはエージェントに決めさせないようにしています。
 
-**▶ インタラクティブな全体図：** [`docs/index.html`](docs/index.html)（EN／日本語切替。各ノードをクリックすると「何を読み・何を書き・承認が必要か」を表示）
+**▶ インタラクティブな全体図：** [li-yiqian.github.io/solo-business-agent-system](https://li-yiqian.github.io/solo-business-agent-system/)（EN／日本語切替。各ノードをクリックすると「何を読み・何を書き・承認が必要か」を表示）
 
 > このリポジトリで公開しているのは**アーキテクチャと運用ルール**のみです。顧客データ、価格、営業ノウハウ、skillファイル本体は意図的に含めていません。
 
