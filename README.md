@@ -30,13 +30,22 @@ flowchart LR
     subgraph Human["Owner (human)#160;#160;#160;"]
       H1["Edit & approve#160;#160;#160;"]
     end
-    subgraph Agent["AI agent · Hermes skills#160;#160;#160;#160;"]
+    subgraph Agent["AI agent · business skills#160;#160;#160;#160;#160;"]
       S1["content-writing#160;#160;#160;"]
+      S7["persuasion-diagnosis#160;#160;#160;#160;<br/>(adapted)#160;#160;"]
+      S8["store-listing#160;#160;#160;"]
       S2["client-communication#160;#160;#160;#160;"]
       S3["report-writing#160;#160;#160;"]
       S4["post-sale-support#160;#160;#160;"]
       S5["content-performance-review#160;#160;#160;#160;#160;"]
       S6["business-data-connections#160;#160;#160;#160;#160;<br/>read-only#160;#160;"]
+    end
+    subgraph Maint["AI agent · maintenance skills#160;#160;#160;#160;#160;"]
+      M1["website-copy-audit#160;#160;#160;"]
+      M2["system-map#160;#160;"]
+      M3["memory-triage#160;#160;#160;"]
+      M4["rule-audit#160;#160;"]
+      M5["change-history#160;#160;#160;"]
     end
     subgraph Knowledge["Knowledge#160;#160;"]
       K1["Rule & memory files#160;#160;#160;#160;<br/>inside skills#160;#160;#160;"]
@@ -55,7 +64,10 @@ flowchart LR
     S5 -->|"findings, gated#160;#160;#160;"| K2
     Agent -->|"drafts#160;#160;"| H1
     H1 -->|"corrections become rules#160;#160;#160;#160;"| K1
+    Maint -->|"audit, keep consistent#160;#160;#160;#160;"| K1
 ```
+
+The system has **12 custom skills plus 1 adapted from an external author**: 8 business skills that run the five stages (including the adapted one), and 5 maintenance skills that audit website copy, keep the system map consistent with the skill files, triage proposed memory changes, check rules for conflicts, and trace rule-change history.
 
 Five business stages, each with its own flow:
 
@@ -122,6 +134,8 @@ docs/overview.png   Screenshot of the swimlane overview
 この仕組みは、こうした失敗パターンを前提に設計しています。
 
 ## 全体構成
+
+skillは**自作12個と、外部の作者のものを改変した1個**です。5つの業務段階を回す業務用skillが8個（改変の1個を含む）、Webサイト文言の監査・システム全体図とskillファイルの整合性維持・記憶の変更提案の仕分け・ルール間の矛盾チェック・ルール変更履歴の追跡を担うメンテナンス用skillが5個です。
 
 5つの業務段階があり、それぞれ独自のフローを持っています。
 
