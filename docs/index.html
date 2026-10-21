@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Solo Business × AI Agent — System Map</title>
+<title>Solo Business × AI Agent: System Map</title>
 <style>
 :root{--foreground:#1f2328;--muted-foreground:#59636e;--border:#d1d9e0;--card:#ffffff;--accent:#eef1f4;--bg:#f6f8fa}
 @media (prefers-color-scheme:dark){:root{--foreground:#e6edf3;--muted-foreground:#9198a1;--border:#3d444d;--card:#151b23;--accent:#262c36;--bg:#0d1117}}
@@ -93,7 +93,7 @@ const PAR=(...xs)=>()=>`<div class="par">${xs.map(f=>f()).join('')}</div>`;
 const BR=(...xs)=>()=>`<div class="branch" style="margin-top:12px">${xs.map(f=>f()).join('<div style="height:8px"></div>')}</div>`;
 
 const UI={
- title:['Solo Business × AI Agent — System Map','個人事業 × AIエージェント — システム全体図'],
+ title:['Solo Business × AI Agent: System Map','個人事業 × AIエージェントのシステム全体図'],
  subtitle:['A one-person career-coaching business for international students in Japan, operated with an AI agent (Hermes) under human approval gates. Click any node to see what it reads, what it writes, and whether it needs approval.',
            '在日留学生向け就職コーチングの個人事業を、人間の承認ゲート付きでAIエージェント（Hermes）と運営する仕組み。各ノードをクリックすると「何を読み・何を書き・承認が必要か」を表示します。'],
  tabs:[['main',['Overview (swimlanes)','全体（スイムレーン）']],['s1',['① Content','① 発信']],['s2',['② Pre-sales','② 商談前']],['s3',['③ Delivery','③ 提供']],['s4',['④ After-sales','④ アフター対応']],['s5',['⑤ Analytics','⑤ 分析']],['sot',['Single-source table','唯一の正 一覧']]],
@@ -121,7 +121,7 @@ const stageText={
 const lanes=[
  [['Owner (human)','オーナー（人間）'],[
   [N('a1','act',['Pick topic / finalize draft','テーマ決定／原稿確定'],['Final wording is always the owner\'s','最終的な言葉は常にオーナーが決める'],{w:[['Owner\'s edits → learning evidence','オーナーの修正 → 学習の証拠']]}),N('a1b','act',['Publish','公開'],'')],
-  [N('a2','act',['Receive DM / comment','DM・コメントを受信'],''),N('a2b','act',['Edit reply draft, then send','返信案を修正して送信'],['Agent draft vs. sent version = training signal','エージェント案と実送信の差分＝学習材料']),N('a2c','act',['Weekly follow-up list (Mon 09:00)','毎週月曜のフォロー一覧'],['Reminder only — never sends on the owner\'s behalf','通知のみ。代理送信はしない'],{n:['Scheduled job, because the agent has no persistent process and cannot "remember" to follow up on its own. Silent when there is nothing to do.','エージェントは常駐しておらず自分から「思い出す」ことができないため、定期ジョブで実行。対象がなければ通知しない。']})],
+  [N('a2','act',['Receive DM / comment','DM・コメントを受信'],''),N('a2b','act',['Edit reply draft, then send','返信案を修正して送信'],['Agent draft vs. sent version = training signal','エージェント案と実送信の差分＝学習材料']),N('a2c','act',['Weekly follow-up list (Mon 09:00)','毎週月曜のフォロー一覧'],['Reminder only; never sends on the owner\'s behalf','通知のみ。代理送信はしない'],{n:['Scheduled job, because the agent has no persistent process and cannot "remember" to follow up on its own. Silent when there is nothing to do.','エージェントは常駐しておらず自分から「思い出す」ことができないため、定期ジョブで実行。対象がなければ通知しない。']})],
   [N('a3','act',['Upload session notes','面談メモをアップロード'],['Custom-report product only','カスタムレポート商品のみ']),N('a3b','act',['Review report → approve → deliver','レポート確認 → 承認 → 納品'],'')],
   [N('a3c','act',['Forward client questions (screenshots)','顧客の質問をスクショで共有'],['Q&A / repurchase / benefit questions','質問／再購入／特典の問い合わせ']),N('a3d','act',['Edit reply draft, then send','返信案を修正して送信'],'')],
   [N('a4','act',['Decide review batch & criteria','振り返り対象と基準を決める'],['Monthly, or when enough data accumulates','月次、またはデータが溜まった時'])]
@@ -138,14 +138,14 @@ const lanes=[
    N('k-cpr','skill',['content-performance-review','content-performance-review'],['Tag · compute · validate · write back','タグ付け・計算・検証・書き戻し'],{r:[['Feishu: post metrics / full text / conversion attribution','Feishu：投稿指標／本文／成約の帰属'],['content-ledger index','content-ledger の索引']],w:[['what-works / what-fails (Obsidian)','what-works／what-fails（Obsidian）'],['content-writing learned patterns','content-writing の学習パターン']],g:['Write-backs to Obsidian and skills require approval','Obsidianとskillへの書き戻しは承認が必要']})]
  ]],
  [['Rule & memory files','ルール・記憶ファイル'],[
-  [N('f-tl','skill',[`topic-library ${SOT(SOTt)[0]}`,`topic-library ${SOT(SOTt)[1]}`],['Topics to write — single entry point','未執筆テーマ — 唯一の入口']),N('f-cl','skill',['content-ledger','content-ledger'],['Draft ↔ topic ↔ post-ID index only','原稿↔テーマ↔投稿IDの索引のみ']),N('f-lp','skill',['learned patterns / anti-patterns','学習パターン／アンチパターン'],['Learned from the owner\'s edits','オーナーの修正から学習'])],
+  [N('f-tl','skill',[`topic-library ${SOT(SOTt)[0]}`,`topic-library ${SOT(SOTt)[1]}`],['Topics to write; the single entry point','未執筆テーマ。唯一の入口']),N('f-cl','skill',['content-ledger','content-ledger'],['Draft ↔ topic ↔ post-ID index only','原稿↔テーマ↔投稿IDの索引のみ']),N('f-lp','skill',['learned patterns / anti-patterns','学習パターン／アンチパターン'],['Learned from the owner\'s edits','オーナーの修正から学習'])],
   [N('f-pm','skill',[`product-matrix ${SOT(SOTt)[0]}`,`product-matrix ${SOT(SOTt)[1]}`],['Product facts; re-verified every 30 days','商品事実；30日ごとに再確認']),N('f-case','skill',['case-library','case-library'],['"Error notebook": agent suggestion vs. owner correction','「間違いノート」：エージェント案とオーナーの修正']),N('f-df','skill',['decision framework / failure patterns','判断フレーム／失敗パターン'],''),N('f-reg','skill',['client-registry rules','client-registry ルール'],['How to identify a client → points to Notion','顧客特定の手順 → Notionを参照']),N('f-cons','skill',['consultation-log rules','consultation-log ルール'],['What counts as a substantive inquiry','「実質的な相談」の基準'])],
   [N('f-samp','skill',['sample reports','サンプルレポート'],''),N('f-pm2','skill',['product-matrix','product-matrix'],['Delivery form & scope per product','商品ごとの提供形態と範囲'])],
   [N('f-ref','skill',['refusal phrasing','断り方の文例'],['Owner\'s real wording','オーナー自身の言い回し']),N('f-ent','skill',['benefit reminder templates','特典リマインドのテンプレート'],''),N('f-case2','skill',['case-library','case-library'],['After-sales failure cases','アフター対応の失敗事例'])],
   [N('f-led','skill',['review-ledger','review-ledger'],['What was analyzed · what is on hold · what can run now','分析済み・保留中・今実行できる分析']),N('f-met','skill',['metric interpretation','指標の読み方'],['Four-quadrant diagnosis','4象限診断']),N('f-fb','skill',['data access manual','データ取得マニュアル'],'')]
  ]],
  [['Obsidian (judgment)','Obsidian（判断）'],[
-  [N('o-pos','obs',[`positioning ${SOT(SOTt)[0]}`,`positioning ${SOT(SOTt)[1]}`],['Brand voice — read before writing','ブランドの声 — 執筆前に読む']),N('o-ww','obs',['what-works / what-fails','what-works／what-fails'],['Validated playbook = writing basis','検証済みの型＝執筆根拠'])],
+  [N('o-pos','obs',[`positioning ${SOT(SOTt)[0]}`,`positioning ${SOT(SOTt)[1]}`],['Brand voice, read before writing','ブランドの声。執筆前に読む']),N('o-ww','obs',['what-works / what-fails','what-works／what-fails'],['Validated playbook = writing basis','検証済みの型＝執筆根拠'])],
   [N('o-icp','obs',[`ICP / persona ${SOT(SOTt)[0]}`,`ICP／ペルソナ ${SOT(SOTt)[1]}`],''),N('o-sop','obs',['pre-sales SOP','商談前SOP'],''),N('o-cat','obs',[`product catalog ${SOT(SOTt)[0]}`,`商品カタログ ${SOT(SOTt)[1]}`],['Strategic positioning of the product ladder','商品ラインの戦略的位置づけ'])],
   [N('o-cat2','obs',['product catalog','商品カタログ'],['Qualitative scope (dynamic facts live in product-matrix)','範囲の定性的な根拠（変動する事実はproduct-matrix）'])],
   [N('o-cases','obs',['case index','事例インデックス'],'')],
@@ -153,7 +153,7 @@ const lanes=[
  ]],
  [['Feishu / Sheets (data)','Feishu／Sheets（データ）'],[
   [N('d-fs','data',['Post metrics / full text','投稿指標／本文'],['Flows back after publishing (read-only)','公開後に戻る（読取専用）'])],
-  [N('d-q','data',['Pre-sales survey (Form → Sheets)','商談前アンケート（Form→Sheets）'],['Nickname only — cannot identify across sources','ニックネームのみ — ソース間で本人特定できない'])],
+  [N('d-q','data',['Pre-sales survey (Form → Sheets)','商談前アンケート（Form→Sheets）'],['Nickname only, so it cannot identify clients across sources','ニックネームのみのため、ソース間で本人特定できない'])],
   [N('d-q2','data',[`Intake survey ${SOT(SOTt)[0]}`,`事前アンケート ${SOT(SOTt)[1]}`],['Input for the custom report; name matching is a known failure point','カスタムレポートの入力；氏名照合はよくある失敗箇所'])],
   [()=>''],
   [N('d-attr','data',[`Conversion attribution ${SOT(SOTt)[0]}`,`成約の帰属 ${SOT(SOTt)[1]}`],['Revenue, purchase count, attribution','売上・購入回数・帰属']),N('d-tag','data',['Tag dictionary / monthly review','タグ辞書／月次振り返り'],'')]
@@ -175,17 +175,17 @@ F.s1=[
      S('s1b','B','',['Signal · analytics findings','候補 · 分析結果'],['Validated patterns from what-works','what-worksの検証済みパターン']),
      S('s1c','C','',['Signal · owner\'s own ideas','候補 · オーナーの発想'],''),
      S('s1d','D','',['Signal · delivery material','候補 · 提供時の素材'],['Proposed after delivery by report-writing','提供後にreport-writingが候補を提示'])),AR,
- S('s1-1',1,'',['Dedupe in topic-library → register','topic-libraryで重複確認 → 登録'],['Single entry point — not Obsidian, not Notion','唯一の入口 — ObsidianでもNotionでもない'],{r:[['topic-library','topic-library']],w:[['new topic entry','新しいテーマ']],g:['Registration needs owner confirmation; registered ≠ start writing','登録はオーナーの確認が必要；登録＝執筆開始ではない']}),AR,
- S('s1-2',2,'',['Choose audience & the post\'s role','読者と記事の役割を決める'],['e.g. reframe / counter-intuitive / case / lead hook — one per post','例：認識転換／逆説／事例／導線フック — 1記事に1つ'],{n:['A single post can be incomplete but sharp; it does not need to cover everything.','1記事で全部を語らず、不完全でも鋭くてよい。']}),AR,
+ S('s1-1',1,'',['Dedupe in topic-library → register','topic-libraryで重複確認 → 登録'],['Single entry point (not Obsidian, not Notion)','唯一の入口（ObsidianでもNotionでもない）'],{r:[['topic-library','topic-library']],w:[['new topic entry','新しいテーマ']],g:['Registration needs owner confirmation; registered ≠ start writing','登録はオーナーの確認が必要；登録＝執筆開始ではない']}),AR,
+ S('s1-2',2,'',['Choose audience & the post\'s role','読者と記事の役割を決める'],['e.g. reframe / counter-intuitive / case / lead hook; one per post','例：認識転換／逆説／事例／導線フック。1記事に1つ'],{n:['A single post can be incomplete but sharp; it does not need to cover everything.','1記事で全部を語らず、不完全でも鋭くてよい。']}),AR,
  S('s1-3',3,'',['Draft title + body','タイトルと本文を下書き'],'',{r:[['title library / style examples','タイトル集／文体サンプル'],['learned patterns / anti-patterns','学習パターン／アンチパターン']]}),AR,
  S('s1-4',4,'gate',['🔒 Owner edits → final','🔒 オーナーが修正 → 確定'],['The diff between draft and final is learning evidence; writing it back needs separate approval','下書きと確定稿の差分は学習の証拠；書き戻しは別途承認']),AR,
- S('s1-5',5,'',['Log in content-ledger','content-ledgerに記録'],['Index only — never metrics or body text','索引のみ — 指標や本文は保存しない']),AR,
+ S('s1-5',5,'',['Log in content-ledger','content-ledgerに記録'],['Index only, never metrics or body text','索引のみ。指標や本文は保存しない']),AR,
  S('s1-6',6,'',['Publish → metrics flow to Feishu','公開 → 指標がFeishuへ'],['Feeds ⑤ Analytics','⑤分析へ'])
 ];
 F.s2=[
  S('s2-1',1,'',['DM / comment arrives','DM・コメント受信'],['Identify the channel first; unknown channel → apply the strictest rules','まずチャネルを特定；不明なら最も厳しいルールを適用']),AR,
  S('s2-2',2,'gate',['🔒 Fork: is this a specific, known client?','🔒 分岐：特定の既存顧客か？'],['Any name, nickname, screenshot or "that person from last time" → 2A mandatory lookup. Brand-new stranger → skip to 3.','名前・ニックネーム・スクショ・「前のあの人」→ 2Aで必ず検索。完全な新規 → 3へ']),
- BR(S('s2-2a','2A','gate',['🔒 Known client: look up Notion client records','🔒 既存顧客：Notion顧客記録を検索'],['No advice, draft or judgment until found','見つかるまで助言・下書き・判断をしない'],{n:['Analytics only has anonymous IDs and surveys only nicknames — the client record is the only place identities connect.','分析データは匿名ID、アンケートはニックネームのみ — 本人をつなげるのは顧客記録だけ。']}),
+ BR(S('s2-2a','2A','gate',['🔒 Known client: look up Notion client records','🔒 既存顧客：Notion顧客記録を検索'],['No advice, draft or judgment until found','見つかるまで助言・下書き・判断をしない'],{n:['Analytics only has anonymous IDs and surveys only nicknames. The client record is the only place identities connect.','分析データは匿名ID、アンケートはニックネームのみ。本人をつなげるのは顧客記録だけ。']}),
     PAR(S('s2-2h','✓','',['Found → read survey answers + delivery page','見つかった → アンケート回答と納品ページを読む'],['Communication constraints must be read before drafting','下書き前にコミュニケーション上の制約を必ず読む']),
         S('s2-2m','✗','gap',['Not found → say so explicitly','見つからない → そう明言する'],['Never substitute a "similar" client or case','「似た」顧客や事例で代用しない'])),
     S('s2-2c','2B','gate',['🔒 State identity + evidence, wait for confirmation','🔒 本人と根拠を示し、確認を待つ'],['"I believe this is X, based on ⟨field⟩." No fuzzy matching by profile similarity.','「Xだと判断、根拠は⟨項目⟩」。プロフィールの類似度で照合しない。'])),AR,
@@ -200,11 +200,11 @@ F.s2=[
     S('s2-c','↑','',['Write-back 3: judgment gaps → case-library','書き戻し3：判断のズレ → case-library'],['Agent suggestion vs. owner correction, anonymized, approval needed','エージェント案とオーナーの修正、匿名化、承認が必要']),
     S('s2-d','↑','',['Write-back 4: substantive inquiries → Notion consultation log','書き戻し4：実質的な相談 → Notion相談ログ'],['After the reply; never blocks the reply','返信後に実行；返信を止めない'],{w:[['objective fields; inferred fields left blank','客観項目；推測項目は空欄']]})),
  BR(S('s2-i','⏱','',['Weekly follow-up digest (scheduled job)','毎週のフォロー一覧（定期ジョブ）'],['Awaiting reply / stalled ≥14 days / close-out candidate ≥30 days','返信待ち／14日以上停滞／30日以上でクローズ候補'],{n:['The agent has no persistent process, so anything that depends on "remembering later" is moved into a scheduled script. Reminder only; never sends messages.','エージェントは常駐しないため、「後で思い出す」必要があるものは定期スクリプトに移す。通知のみで送信はしない。']}),
-    S('s2-h','⚠','gate',['🔒 Follow-ups only on real triggers','🔒 フォローは実際のきっかけがある時だけ'],['Real deadlines or dates the client mentioned — no artificial scarcity','実在の締切や本人が言った日程のみ — 人工的な希少性は使わない']))
+    S('s2-h','⚠','gate',['🔒 Follow-ups only on real triggers','🔒 フォローは実際のきっかけがある時だけ'],['Real deadlines or dates the client mentioned. No artificial scarcity','実在の締切や本人が言った日程のみ。人工的な希少性は使わない']))
 ];
 F.s3=[
  S('d-0',0,'',['Client pays','入金'],['Any product, any amount','どの商品・金額でも']),AR,
- S('d-1',1,'gate',['🔒 Create Notion client record','🔒 Notion顧客記録を作成'],['Every paying client gets a record — low-ticket buyers are the most likely to come back','有料顧客は全員記録 — 低単価の購入者ほど再購入しやすい'],{n:['Creating a record costs far less than misidentifying a returning client.','記録を作る手間は、再来客を取り違えるコストよりずっと小さい。']}),AR,
+ S('d-1',1,'gate',['🔒 Create Notion client record','🔒 Notion顧客記録を作成'],['Every paying client gets a record: low-ticket buyers are the most likely to come back','有料顧客は全員記録。低単価の購入者ほど再購入しやすい'],{n:['Creating a record costs far less than misidentifying a returning client.','記録を作る手間は、再来客を取り違えるコストよりずっと小さい。']}),AR,
  PAR(S('d-a','A','',['Self-serve material','セルフ学習用の資料'],['Delivered as a link','リンクで提供']),
      S('d-b','B','',['1:1 session','1対1の面談'],['No written deliverable','書面の納品物なし'])),AR,
  PAR(S('d-c','C','',['Custom report → report-writing','カスタムレポート → report-writing'],['Agent drafts a personalized report','エージェントが個別レポートを起草'],{r:[['intake survey (Sheets)','事前アンケート（Sheets）'],['session notes (uploaded by owner)','面談メモ（オーナーがアップ）']],w:[['Notion delivery page','Notion納品ページ'],['topic candidates → topic-library (owner picks)','テーマ候補 → topic-library（オーナーが選択）']],g:['Full draft shown to owner → approved → only then written to Notion','全文をオーナーに提示 → 承認 → その後にNotionへ書き込み']}),
@@ -217,13 +217,13 @@ F.s3=[
 F.s4=[
  S('p-1',1,'gate',['🔒 Three steps on entry (fixed order)','🔒 入口の3ステップ（順序固定）'],['① Identify via client record, state who + why, wait for confirmation ② Read the record, constraints first ③ Scope: purchased products → is the support window still valid?','①顧客記録で本人を特定し、誰か・根拠を示して確認を待つ ②記録を読む（制約を最優先）③範囲：購入商品 → サポート期間は有効か'],{r:[['client-registry rules','client-registry ルール'],['product-matrix','product-matrix']]}),AR,
  S('p-2',2,'',['Look up this product\'s support scope','この商品のサポート範囲を確認'],['Each product has a different window and scope','商品ごとに期間と範囲が異なる'],{r:[['product-matrix (no separate scope table)','product-matrix（別の範囲表は持たない）']]}),AR,
- S('p-3',3,'gate',['🔒 Scope gate: classify by intended outcome, not keywords','🔒 範囲ゲート：キーワードではなく求める結果で分類'],['Is the client asking to explain an existing deliverable, or to produce a new one?','既存の納品物の説明か、新しい成果物の作成か？'],{n:['One message often mixes types — classify each part separately. Don\'t reject everything because one part is out of scope, and don\'t answer the out-of-scope part because the rest went well.','1通に複数の種類が混ざるのが普通 — 部分ごとに分類する。一部が範囲外でも全体を断らず、流れで範囲外まで答えない。']}),AR,
+ S('p-3',3,'gate',['🔒 Scope gate: classify by intended outcome, not keywords','🔒 範囲ゲート：キーワードではなく求める結果で分類'],['Is the client asking to explain an existing deliverable, or to produce a new one?','既存の納品物の説明か、新しい成果物の作成か？'],{n:['One message often mixes types, so classify each part separately. Don\'t reject everything because one part is out of scope, and don\'t answer the out-of-scope part because the rest went well.','1通に複数の種類が混ざるのが普通なので、部分ごとに分類する。一部が範囲外でも全体を断らず、流れで範囲外まで答えない。']}),AR,
  PAR(S('p-a','A','',['Why wasn\'t X in the deliverable?','なぜXが納品物にないのか？'],['Explain the real reasoning at the time; re-frame as priority','当時の実際の判断根拠を説明；優先順位の問題として整理']),
-     S('p-b','B','',['Premises changed','前提が変わった'],['Assess impact, isolate the exception — neither discard nor rigidly defend','影響を見極めて例外として切り出す — 全否定も固執もしない']),
+     S('p-b','B','',['Premises changed','前提が変わった'],['Assess impact, isolate the exception; neither discard nor rigidly defend','影響を見極めて例外として切り出す。全否定も固執もしない']),
      S('p-c','C','',['Tactical execution question','実行面の質問'],['Give decision criteria, not a single answer','単一の答えではなく判断軸を渡す']),
      S('p-d','D','gate',['Out of scope','範囲外'],['Decline directly, using the owner\'s own phrasing','オーナー自身の言い回しで率直に断る'])),AR,
  S('p-4',4,'',['Outside the support window','サポート期間外'],['Brief acknowledgement, explicitly "best-effort, no guaranteed response time"','短く応じるが「対応は可能な範囲で、即答は保証しない」と明示']),AR,
- S('p-5',5,'gate',['🔒 Time-limited benefit reminder (once, separate message)','🔒 期限付き特典のリマインド（1回のみ・別メッセージ）'],['Purpose: the client shouldn\'t lose a benefit they already have — not a second sale','目的：既に持っている特典を失わないため — 追加販売ではない']),AR,
+ S('p-5',5,'gate',['🔒 Time-limited benefit reminder (once, separate message)','🔒 期限付き特典のリマインド（1回のみ・別メッセージ）'],['Purpose: the client shouldn\'t lose a benefit they already have, not to make a second sale','目的：既に持っている特典を失わないため。追加販売ではない']),AR,
  S('p-6',6,'',['Repurchase / upgrade / returning client','再購入／アップグレード／再来客'],['Read record → diagnose from the client\'s actual situation → match by decision stage','記録を読む → 実際の状況から診断 → 意思決定の段階で合わせる'],{n:['Satisfaction raises willingness to listen; it is not evidence of product fit.','満足度は話を聞く意欲を高めるが、商品適合の根拠ではない。']}),AR,
  S('p-7',7,'',['Close-out logging','クローズ時の記録'],['Factual timeline entries need no approval; everything else does','事実のタイムライン追記は承認不要；それ以外は承認が必要'],{w:[['Notion client timeline','Notion顧客タイムライン'],['case library (anonymized, approval)','事例集（匿名化・承認）'],['topic candidates → topic-library','テーマ候補 → topic-library']]})
 ];
@@ -231,7 +231,7 @@ F.s5=[
  S('s4-0',0,'',['Read the review ledger first','まず振り返り台帳を読む'],['What ran before · what is on hold · what can run now','実施済み・保留中・今実行できる分析']),AR,
  S('s4-1',1,'',['Fix scope & sample boundary','範囲とサンプル境界を決める'],['Which posts, which time window, compared to what','どの投稿・どの期間・何と比べるか']),AR,
  S('s4-2',2,'',['Fetch via business-data-connections (read-only)','business-data-connectionsで取得（読取専用）'],'',{r:[['Feishu: metrics / full text / conversion attribution','Feishu：指標／本文／成約の帰属'],['Sheets: survey answers','Sheets：アンケート回答'],['content-ledger: topic ↔ post-ID index','content-ledger：テーマ↔投稿ID']],g:['Read-only; analytics records carry only anonymous IDs','読取専用；分析データは匿名IDのみ']}),AR,
- S('s4-3',3,'',['Verify tags (not re-tag)','タグを確認（付け直さない）'],['Hook type / funnel layer were fixed at writing time','フックの種類／ファネル層は執筆時に確定済み'],{n:['The funnel layer decides which metric judges a post — it must not change after seeing the numbers.','ファネル層でどの指標で評価するかが決まる — 数値を見てから変えてはいけない。']}),AR,
+ S('s4-3',3,'',['Verify tags (not re-tag)','タグを確認（付け直さない）'],['Hook type / funnel layer were fixed at writing time','フックの種類／ファネル層は執筆時に確定済み'],{n:['The funnel layer decides which metric judges a post, so it must not change after seeing the numbers.','ファネル層でどの指標で評価するかが決まるため、数値を見てから変えてはいけない。']}),AR,
  S('s4-4',4,'gate',['🔒 Three hard sample gates','🔒 3つのサンプル基準'],['① Below recent reach baseline (median of last 15–20 posts) → judgment withheld ② n < 5 → "watch" only ③ Conversion-layer posts are never judged by save rate','①直近の到達ベースライン（直近15〜20本の中央値）未満 → 判断保留 ②n＜5 → 「様子見」のみ ③成約層の投稿は保存率で評価しない']),AR,
  S('s4-5',5,'',['Compute + validate','計算＋検証'],['Self-reported attribution ≠ causation; when data contradicts positioning, check the data first','自己申告の帰属≠因果；データとポジショニングが矛盾したら、まずデータを疑う']),AR,
  S('s4-6',6,'',['Grade findings','結論を格付け'],['Findings backed only by traffic metrics are downgraded to "reference" and labeled as optimizing saves, not purchases','流入指標だけが根拠の結論は「参考」に格下げし、購入ではなく保存を最適化するものと明記'],{n:['Metric priority: conversion > saves > CTR. High-save posts can produce zero sales; low-reach posts can bring clients.','指標の優先度：成約＞保存＞CTR。保存が多くても売上ゼロのことがあり、到達が少なくても顧客につながることがある。']}),AR,

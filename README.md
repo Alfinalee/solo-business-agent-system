@@ -1,4 +1,4 @@
-# Solo Business × AI Agent — System Design
+# Solo Business × AI Agent: System Design
 
 **English** | [日本語](#日本語)
 
@@ -100,9 +100,9 @@ docs/overview.png   Screenshot of the swimlane overview
 
 <a id="日本語"></a>
 
-# 個人事業 × AIエージェント — システム設計
+# 個人事業 × AIエージェントのシステム設計
 
-[English](#solo-business--ai-agent--system-design) | **日本語**
+[English](#solo-business--ai-agent-system-design) | **日本語**
 
 在日留学生向けの就職コーチングを個人事業として運営しています。この仕組みでは日々の業務の大部分をAIエージェントに任せつつ、人間が判断すべきことはエージェントに決めさせないようにしています。
 
