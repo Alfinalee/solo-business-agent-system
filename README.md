@@ -6,7 +6,7 @@ How I run a one-person career-coaching business (for international students job-
 
 **▶ Interactive system map:** [li-yiqian.github.io/solo-business-agent-system](https://li-yiqian.github.io/solo-business-agent-system/) (EN / 日本語 toggle; click any node to see what it reads, what it writes, and whether it needs approval)
 
-![System overview](docs/overview.png)
+[![System overview (click to open the interactive map)](docs/overview.png)](https://li-yiqian.github.io/solo-business-agent-system/)
 
 > This repository shows the **architecture and operating rules** only. Client data, pricing, sales playbooks and the actual skill files are intentionally excluded.
 
