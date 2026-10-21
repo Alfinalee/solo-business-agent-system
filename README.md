@@ -87,7 +87,7 @@ The stages form a loop: analytics findings feed writing, sales conversations fee
 | Judgment layer | Obsidian (positioning, ICP, validated content patterns) |
 | Data layer | Feishu Base (post metrics, conversion attribution), Google Sheets (survey answers) |
 | Records & delivery | Notion (client records, consultation log, delivery pages) |
-| Scheduling | Cron job for the weekly follow-up digest |
+| Scheduling | 2 weekly cron jobs: a follow-up digest of open sales conversations, and a consistency check that the system map still matches the skill files |
 
 ## Repository contents
 
@@ -153,4 +153,4 @@ docs/overview.png   Screenshot of the swimlane overview
 | 判断レイヤー | Obsidian（ポジショニング、ICP、検証済みの型） |
 | データ層 | Feishu Base（投稿指標、成約の帰属）、Google Sheets（アンケート回答） |
 | 記録・納品 | Notion（顧客記録、相談ログ、納品ページ） |
-| スケジューリング | 毎週のフォロー一覧を出す定期ジョブ |
+| スケジューリング | 毎週2つの定期ジョブ：商談中の相談のフォロー一覧、システム全体図とskillファイルの整合性チェック |
